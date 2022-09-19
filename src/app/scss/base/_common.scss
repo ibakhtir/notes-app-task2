@@ -1,0 +1,36 @@
+body {
+  font-family: $default-font;
+  font-size: 16px;
+}
+
+.container {
+  max-width: $content-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  @extend %form-shared;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+select {
+  @extend %form-shared;
+  display: block;
+  width: 100%;
+  border: 1px solid $gray-400;
+  background-clip: padding-box;
+  background: $white;
+  color: $dark;
+}
