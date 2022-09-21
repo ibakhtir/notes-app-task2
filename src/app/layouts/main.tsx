@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { orderBy } from "lodash";
 
 import NotesTable from "../components/notesTable";
 import StatsTable from "../components/statsTable";
@@ -25,6 +26,10 @@ const Main: React.FC = () => {
   const stats = useSelector(getStats);
 
   const dispatch = useAppDispatch();
+
+  const setSort = (notes: Note[], path: string, order: "asc" | "desc") => {
+    return orderBy(notes, [path], [order]);
+  };
 
   const handleShowModal = (note: Note) => {
     setShowModal(true);
@@ -67,7 +72,11 @@ const Main: React.FC = () => {
       <div className="notes">
         <section className="notes__block">
           <NotesTable
-            notes={isActiveTable ? activeNotes : archivedNotes}
+            notes={
+              isActiveTable
+                ? setSort(activeNotes, "createdAt", "desc")
+                : setSort(archivedNotes, "createdAt", "desc")
+            }
             onShowModal={handleShowModal}
             onArchiveNote={handleArchiveNote}
             onDeleteNote={handleDeleteNote}
