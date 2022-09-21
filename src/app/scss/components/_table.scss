@@ -1,0 +1,89 @@
+// Common
+
+table {
+  width: 100%;
+  border-spacing: 0;
+
+  thead {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  tbody {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 16px 20px;
+  }
+
+  td {
+    border-bottom: 1px solid $gray-200;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.list-table__header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background: $scrollbar-thumb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+// Table 1
+
+.notes__table-wrapper {
+  margin: 40px 0 20px 0;
+  height: 320px;
+  overflow: auto;
+
+  .list-table {
+    &__actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button {
+        margin-right: 4px;
+        font-size: 14px;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &__edit {
+      background: $edit;
+    }
+
+    &__archive {
+      background: $archive;
+    }
+
+    &__delete {
+      background: $delete;
+    }
+  }
+}
+
+// Table 2
+
+.notes__table-container {
+  margin: 30px 0 10px 0;
+  height: 250px;
+  overflow: auto;
+}
+
+/* Scrollbar */
+
+@include scrollbar(".notes__table-wrapper");
+@include scrollbar(".notes__table-container");
