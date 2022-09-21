@@ -1,7 +1,14 @@
 import React from "react";
 
-function App() {
-  return <h1>Hello World</h1>;
-}
+import Container from "./components/common/container";
+import Main from "./layouts/main";
+
+const App: React.FC = () => {
+  return (
+    <Container>
+      <Main />
+    </Container>
+  );
+};
 
 export default App;

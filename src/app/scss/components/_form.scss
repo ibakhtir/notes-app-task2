@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px;
+
+  &__input,
+  &__options {
+    margin-bottom: 7px;
+  }
+
+  &__options select {
+    padding-left: 8px;
+    cursor: pointer;
+  }
+
+  &__actions {
+    text-align: end;
+  }
+
+  &__save,
+  &__cancel {
+    color: $white;
+  }
+
+  &__save {
+    margin: 20px 3px 0 3px;
+    background: $save;
+  }
+
+  &__cancel {
+    margin-top: 20px;
+    background: $cancel;
+  }
+
+  &__error {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 3px 0 7px;
+    color: $error;
+  }
+}
