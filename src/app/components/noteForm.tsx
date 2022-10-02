@@ -90,7 +90,10 @@ const NoteForm: React.FC<NoteFormProps> = ({ note, onCloseModal }) => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col justify-center py-1 px-2"
+      onSubmit={handleSubmit}
+    >
       <TextField
         name="title"
         value={data.title}
@@ -115,11 +118,11 @@ const NoteForm: React.FC<NoteFormProps> = ({ note, onCloseModal }) => {
         value={data.category}
         onChange={handleChange}
       />
-      <div className="form__actions">
-        <Button className="form__save" type="submit">
+      <div className="text-white text-end mt-5">
+        <Button className="bg-save ml-1" type="submit">
           Save
         </Button>
-        <Button className="form__cancel" type="button" onClick={onCloseModal}>
+        <Button className="bg-cancel ml-1" type="button" onClick={onCloseModal}>
           Cancel
         </Button>
       </div>

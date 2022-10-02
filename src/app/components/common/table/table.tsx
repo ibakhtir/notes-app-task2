@@ -6,7 +6,7 @@ import TableHeader from "./tableHeader";
 
 const Table: React.FC<TableProps> = ({ items, columns }) => {
   return (
-    <table className="notes__table list-table">
+    <table className="table-auto w-full border-spacing-0">
       <TableHeader columns={columns} />
       <TableBody items={items} columns={columns} />
     </table>

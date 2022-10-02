@@ -23,9 +23,15 @@ const SelectField: React.FC<SelectProps> = ({
   };
 
   return (
-    <div className="form__options">
+    <div className="mb-2">
       {label && <label htmlFor={name}>{label}</label>}
-      <select id={name} name={name} value={value} onChange={handleChange}>
+      <select
+        className="cursor-pointer pl-2"
+        id={name}
+        name={name}
+        value={value}
+        onChange={handleChange}
+      >
         {options.length > 0 &&
           options.map((option) => (
             <option key={option.value} value={option.label}>
@@ -33,7 +39,7 @@ const SelectField: React.FC<SelectProps> = ({
             </option>
           ))}
       </select>
-      {error && <span className="form__error">{error}</span>}
+      {error && <span className="form-error">{error}</span>}
     </div>
   );
 };
