@@ -20,7 +20,7 @@ const TextField: React.FC<InputProps> = ({
   };
 
   return (
-    <div className="form__input">
+    <div className="mb-2">
       {label && <label htmlFor={name}>{label}</label>}
       <input
         id={name}
@@ -31,7 +31,7 @@ const TextField: React.FC<InputProps> = ({
         onChange={handleChange}
         autoComplete="true"
       />
-      {error && <span className="form__error">{error}</span>}
+      {error && <span className="form-error">{error}</span>}
     </div>
   );
 };

@@ -69,8 +69,8 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <div className="notes">
-        <section className="notes__block">
+      <div>
+        <section>
           <NotesTable
             notes={
               isActiveTable
@@ -81,16 +81,16 @@ const Main: React.FC = () => {
             onArchiveNote={handleArchiveNote}
             onDeleteNote={handleDeleteNote}
           />
-          <div className="notes__actions">
+          <div className="text-white text-end mr-8 mb-1">
             <Button
-              className="notes__archive"
+              className="bg-archive-main tracking-wider mr-1"
               type="button"
               onClick={handleToggleTable}
             >
               {isActiveTable ? "Archive" : "Active"}
             </Button>
             <Button
-              className="notes__add"
+              className="bg-add tracking-wider mr-1"
               type="button"
               onClick={() => setShowModal(true)}
             >
@@ -98,7 +98,7 @@ const Main: React.FC = () => {
             </Button>
           </div>
         </section>
-        <section className="notes__block">
+        <section>
           <StatsTable items={stats} />
         </section>
       </div>

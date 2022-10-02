@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  button {
+    @apply inline-block text-center align-middle text-base font-normal 
+    border-none rounded-md outline-none cursor-pointer py-1.5 px-3;
+  }
+
+  input,
+  select {
+    @apply block w-full text-base font-normal border border-solid border-gray-400 
+    rounded-md outline-none bg-clip-padding bg-white text-dark py-1.5 px-3;
+  }
+}
+
+@layer components {
+  .form-error {
+    @apply inline-block text-center text-sm text-error mt-1 mx-2;
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    background: theme(colors[gray-100]);
+  }
+
+  .scroll::-webkit-scrollbar-track {
+    background: theme(colors.white);
+  }
+}

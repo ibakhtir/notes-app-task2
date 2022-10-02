@@ -29,7 +29,7 @@ const StatsTable: React.FC<StatsTableProps> = ({ items }) => {
   ];
 
   return (
-    <div className="notes__table-container">
+    <div className="overflow-auto h-60 mt-8 mb-2 scroll">
       <Table items={items} columns={columns} />
     </div>
   );
