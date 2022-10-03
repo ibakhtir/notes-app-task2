@@ -2,7 +2,7 @@ import React from "react";
 
 import { Note } from "../redux/notes/types";
 import { getDate } from "../utils/getDate";
-import Button from "./common/Button";
+import Button from "./common/button";
 import Table from "./common/table/table";
 
 type NotesTableProps = {
