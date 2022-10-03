@@ -2,8 +2,8 @@ import React from "react";
 
 import { Note } from "../redux/notes/types";
 import { getDate } from "../utils/getDate";
+import Button from "./common/Button";
 import Table from "./common/table/table";
-import Button from "./common/button";
 
 type NotesTableProps = {
   notes: Note[];
@@ -45,8 +45,9 @@ const NotesTable: React.FC<NotesTableProps> = ({
         <div className="flex justify-end items-center">
           {!note.isArchived && (
             <Button
-              className="bg-edit p-2 mr-1"
               type="button"
+              color="bg-edit"
+              restStyle="p-2 mr-1"
               onClick={() => onShowModal(note)}
             >
               <svg
@@ -66,8 +67,9 @@ const NotesTable: React.FC<NotesTableProps> = ({
             </Button>
           )}
           <Button
-            className="bg-archive p-2 mr-1"
             type="button"
+            color="bg-archive"
+            restStyle="p-2 mr-1"
             onClick={() => onArchiveNote(note)}
           >
             <svg
@@ -86,8 +88,9 @@ const NotesTable: React.FC<NotesTableProps> = ({
             </svg>
           </Button>
           <Button
-            className="bg-delete p-2 mr-1"
             type="button"
+            color="bg-delete"
+            restStyle="p-2 mr-1"
             onClick={() => onDeleteNote(note.id)}
           >
             <svg

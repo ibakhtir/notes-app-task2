@@ -30,6 +30,7 @@ const TextField: React.FC<InputProps> = ({
         placeholder={placeholder}
         onChange={handleChange}
         autoComplete="true"
+        className={error && "border-error"}
       />
       {error && <span className="form-error">{error}</span>}
     </div>

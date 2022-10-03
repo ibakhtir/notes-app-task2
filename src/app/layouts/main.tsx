@@ -5,7 +5,7 @@ import { orderBy } from "lodash";
 import NotesTable from "../components/notesTable";
 import StatsTable from "../components/statsTable";
 import NoteForm from "../components/noteForm";
-import Button from "../components/common/button";
+import Button from "../components/common/Button";
 import Modal from "../components/common/modal";
 import { useAppDispatch } from "../redux/store";
 import { deleteNote, saveNote } from "../redux/notes/slice";
@@ -83,15 +83,17 @@ const Main: React.FC = () => {
           />
           <div className="text-white text-end mr-8 mb-1">
             <Button
-              className="bg-archive-main tracking-wider mr-1"
               type="button"
+              color="bg-archive-main"
+              restStyle="tracking-wider mr-1"
               onClick={handleToggleTable}
             >
               {isActiveTable ? "Archive" : "Active"}
             </Button>
             <Button
-              className="bg-add tracking-wider mr-1"
               type="button"
+              color="bg-add"
+              restStyle="tracking-wider mr-1"
               onClick={() => setShowModal(true)}
             >
               Create
