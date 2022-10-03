@@ -9,19 +9,30 @@ export default {
   component: Button,
   argTypes: {
     type: {
-      description: "Button types like button or submit"
+      description: "Button types like button or submit",
+      options: ["button", "submit"],
+      defaultValue: "button",
+      control: {
+        type: "radio"
+      }
     },
     children: {
+      type: "string",
       name: "label",
       description: "Content inside the button",
       defaultValue: "Button"
     },
     size: {
-      description: "Button size"
+      description: "Button size",
+      options: ["btn-small", "btn-medium", "btn-large"],
+      defaultValue: "btn-medium",
+      control: {
+        type: "radio"
+      }
     },
     color: {
       description: "Button color",
-      options: ["bg-add", "bg-save", "bg-cancel"],
+      options: ["bg-add", "bg-archive-main", "bg-save"],
       defaultValue: "bg-add",
       control: {
         type: "radio"
@@ -37,6 +48,7 @@ export default {
       }
     },
     disabled: {
+      type: "boolean",
       description: "Whether the button is disabled"
     },
 
