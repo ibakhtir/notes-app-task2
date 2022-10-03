@@ -1,24 +1,28 @@
 import React from "react";
 
-type ButtonProps = {
+interface ButtonProps {
   type: "button" | "submit";
-  children?: React.ReactNode;
-  className?: string;
+  children: React.ReactNode;
+  size?: "btn-small" | "btn-medium" | "btn-large";
+  color?: string;
+  restStyle?: string;
   disabled?: boolean;
   onClick?: () => void;
-};
+}
 
 const Button: React.FC<ButtonProps> = ({
   type,
   children,
-  className,
-  disabled,
+  size = "btn-medium",
+  color,
+  restStyle,
+  disabled = false,
   onClick
 }) => {
   return (
     <button
       type={type}
-      className={className}
+      className={`${size} ${color} ${restStyle}`}
       disabled={disabled}
       onClick={onClick}
     >

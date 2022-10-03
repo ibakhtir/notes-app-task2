@@ -8,8 +8,8 @@
   }
 
   button {
-    @apply inline-block text-center align-middle text-base font-normal 
-    border-none rounded-md outline-none cursor-pointer py-1.5 px-3;
+    @apply inline-block text-center align-middle font-normal border-none 
+    outline-none cursor-pointer disabled:opacity-75;
   }
 
   input,
@@ -22,6 +22,18 @@
 @layer components {
   .form-error {
     @apply inline-block text-center text-sm text-error mt-1 mx-2;
+  }
+
+  .btn-small {
+    @apply text-sm rounded py-1 px-2;
+  }
+
+  .btn-medium {
+    @apply text-base rounded-md py-1.5 px-3;
+  }
+
+  .btn-large {
+    @apply text-xl rounded-lg py-2 px-4;
   }
 
   .scroll::-webkit-scrollbar {

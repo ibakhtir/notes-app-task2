@@ -5,7 +5,7 @@ import { Note } from "../redux/notes/types";
 import { saveNote } from "../redux/notes/slice";
 import { getDateFromText } from "../utils/getDate";
 import generateId from "../utils/generateId";
-import Button from "./common/button";
+import Button from "./common/Button";
 import TextField from "./common/forms/textField";
 import SelectField from "./common/forms/selectField";
 import { InputValue } from "./common/forms/types";
@@ -119,10 +119,15 @@ const NoteForm: React.FC<NoteFormProps> = ({ note, onCloseModal }) => {
         onChange={handleChange}
       />
       <div className="text-white text-end mt-5">
-        <Button className="bg-save ml-1" type="submit">
+        <Button type="submit" color="bg-save" restStyle="ml-1">
           Save
         </Button>
-        <Button className="bg-cancel ml-1" type="button" onClick={onCloseModal}>
+        <Button
+          type="button"
+          color="bg-cancel"
+          restStyle="ml-1"
+          onClick={onCloseModal}
+        >
           Cancel
         </Button>
       </div>
