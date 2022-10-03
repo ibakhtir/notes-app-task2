@@ -5,7 +5,7 @@ import { Note } from "../redux/notes/types";
 import { saveNote } from "../redux/notes/slice";
 import { getDateFromText } from "../utils/getDate";
 import generateId from "../utils/generateId";
-import Button from "./common/Button";
+import Button from "./common/button";
 import TextField from "./common/forms/textField";
 import SelectField from "./common/forms/selectField";
 import { InputValue } from "./common/forms/types";

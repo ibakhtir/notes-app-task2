@@ -5,7 +5,7 @@ import { orderBy } from "lodash";
 import NotesTable from "../components/notesTable";
 import StatsTable from "../components/statsTable";
 import NoteForm from "../components/noteForm";
-import Button from "../components/common/Button";
+import Button from "../components/common/button";
 import Modal from "../components/common/modal";
 import { useAppDispatch } from "../redux/store";
 import { deleteNote, saveNote } from "../redux/notes/slice";
